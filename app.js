@@ -4,10 +4,22 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var mongoose = require('mongoose');
+var bodyParser = require('body-parser');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
+//conexion  BD
+var mongoDB = 'mongodb://127.0.0.1:27017/foodbd';
+mongoose.connect(mongoDB,{
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console,'Error de conexion MongoDB'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
