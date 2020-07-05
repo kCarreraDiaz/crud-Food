@@ -1,0 +1,36 @@
+<h1>Categorias</h1>
+
+<div class="container">
+    <h3><a href="/categorias/create">Crear categoria</a></h3>
+    <h1>Lista de categorias</h1>
+    {{#if success}}
+        <div>
+            {{success}}
+        </div>
+    {{/if}}
+    {{#if categorias}}
+    <table>
+        <thead>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Fecha de creacion</th>
+            <th>Acciones</th>
+        </thead>
+        <tbody>
+            {{# each categorias}}
+            <tr>
+                <td><a href="/categorias/show/{{_id}}">{{ nombre }}</a></td>
+                <td>{{ descripcion }}</td>
+                <td>{{ created_at }}</td>
+                <td><a href="/categorias/edit/{{_id}}">Editar</a>
+                <form action="/categorias/delete/{{_id}}" method="post">
+                    <button type="submit">Delete</button>
+                </form></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{~^~}}
+    <div>Categorias no encontrados</div>
+    {{/if}}
+</div>

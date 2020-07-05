@@ -1,0 +1,17 @@
+<div class="container">
+    <h3><a href="/categorias">Lista de categorias</a></h3>
+    <h1>Editar categoria</h1>
+    <form action="/categorias/update/{{ categoria.id }}" method="post">
+        <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" value="{{categoria.nombre}}">
+        </div>
+        <div>
+            <label for="descripcion">Descripcion</label>
+            <textarea name="descripcion" id="descripcion">{{categoria.descripcion}}</textarea>
+        </div>
+        <div>
+            <input type="submit" value="Actualizar">
+        </div>
+    </form>
+</div>
