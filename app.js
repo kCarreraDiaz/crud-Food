@@ -6,11 +6,17 @@ var logger = require('morgan');
 
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
+var flash = require('connect-flash');
+var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+<<<<<<< HEAD
 var recetasRouter = require('./routes/recetas');
 //var categoriasRouter = require('./routes/categorias');
+=======
+var categoriasRouter = require('./routes/categorias');
+>>>>>>> b3a8122458a951890e31cfe5a4684339c88bc6b5
 
 var app = express();
 
@@ -33,13 +39,27 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: 'secret',
+  resave: true,
+  saveUninitialized: true
+}));
+app.use(flash());
+app.use((req, res, next) => {
+  res.locals.success = req.flash('success');
+  next();
+})
 
 app.use('/bootstrap',express.static(__dirname+'/node_modules/bootstrap/dist/css/'));//linea para BOOTSTRAP
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+<<<<<<< HEAD
 app.use('/recetas', recetasRouter);
 //app.use('/categorias', categoriasRouter);
+=======
+app.use('/categorias', categoriasRouter);
+>>>>>>> b3a8122458a951890e31cfe5a4684339c88bc6b5
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

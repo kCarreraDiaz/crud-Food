@@ -43,10 +43,8 @@ db.comentarios.insert(
 );
 db.categorias.insert(
     [
-        {id_categoria:100,
-        nombre:'Categoria 1',
+        {nombre:'Categoria 1',
         descripcion:'descripcion 1',
         created_at: new Date ('07/01/2020')}
     ]
 );
-
