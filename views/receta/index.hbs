@@ -1,0 +1,40 @@
+    <h1>Recetas</h1>
+    
+<p>
+    <div class="container">
+        <h3> <a href="/recetas/create"> Crear receta </a></h3>
+        <h1>Lista de Recetas</h1>
+        {{#if recetas }}
+           <table class="table table-hover">
+                <thead>
+                   <tr>
+                       <th>Nombre</th>
+                       <th>Cant. Ingredientes</th>
+                       <th>Pasos</th>
+                       <th>id_imagene</th>
+                       <th>tiempo</th>
+                       <th>modo</th>
+                       <th>id_categoria</th>
+                       <th>id_comentario</th>
+                   </tr>
+                </thead>
+                <tbody>
+                    {{# each recetas }}
+                    <tr>
+                        <td> <a href="/recetas/show/{{ _id  }}"> {{ nombre }}  </td>
+                        <td> {{ cant_ingredientes }} </td>
+                        <td> {{ pasos }} </td>
+                        <td> {{ id_imagene }} </td>
+                        <td> {{ tiempo }} </td>
+                        <td> {{ modo }} </td>
+                        <td> {{ id_categoria }} </td>
+                        <td> {{ id_comentario }} </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+           </table>
+        {{~^~}}
+            <div>Recetas no encontradas</div>
+        {{/if}}
+    </div>
+</p>

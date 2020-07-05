@@ -1,0 +1,43 @@
+<div class="container">
+    <h3><a href="/recetas">Lista de recetas</a></h3>
+    <h1>Crear nueva receta</h1>
+
+    <form action="/recetas/save" method="post">
+        <div class="form-group">
+            <label for="nombre">Nombre </label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre"/>
+        </div>
+        <div class="form-group">
+            <label for="cant_ingredientes">Lista de Ingredientes </label><br>
+             <textarea name="cant_ingredientes" rows="10" cols="50" id="cant_ingredientes" name="cant_ingredientes" placeholder="Ingredientes"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="pasos">Pasos </label><br>
+            <textarea name="pasos" rows="10" cols="50" id="pasos" name="pasos" placeholder="Ingrese los pasos de la receta"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="imagenes">Imagenes</label>
+            <input type="text" class="form-control" id="id_imagene" name="id_imagene" placeholder="Imagenes"/>
+        </div>
+        <div class="form-group">
+            <label for="tiempo">Tiempo </label>
+            <input type="text" class="form-control" id="tiempo" name="tiempo" placeholder="tiempo"/>
+        </div>
+        <div class="form-group">
+            <label for="modo">Modo </label>
+            <input type="text" class="form-control" id="modo" name="modo" placeholder="modo"/>
+        </div>
+        <div class="form-group">
+            <label for="categoria">Categoria </label>
+            <input type="text" class="form-control" id="id_categoria" name="id_categoria" placeholder="categoria"/>
+        </div>
+        
+         <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Grabar">
+        </div>
+    </form>
+</div>
+
+<td> <a href="/recetas/show/{{ _id  }}"> {{ nombre }}  </td>
+                        
+                        

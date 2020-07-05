@@ -1,0 +1,48 @@
+<div class="container">
+
+    <h3><a href="/recetas">Lista de Recetas</a></h3>
+    <h1>Detalle de la receta</h1>
+    
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td> {{ receta.nombre}} </td>
+                </tr>
+                <tr>
+                    <td>Cantidad Ingredientes</td>
+                    <td>{{ receta.cant_ingredientes}} </td>
+                </tr>
+                <tr>
+                    <td>Cantidad de Pasos</td>
+                    <td> {{ receta.pasos}} </td>
+                </tr>
+                <tr>
+                    <td>ID Imagen</td>
+                    <td> {{ receta.id_imagene}} </td>
+                </tr>
+                <tr>
+                    <td>Tiempo</td>
+                    <td>{{ receta.tiempo}} </td>
+                </tr>
+                <tr>
+                    <td>Modo</td>
+                    <td> {{receta.modo}} </td>
+                </tr>
+                <tr>
+                    <td>ID Categoria</td>
+                    <td> {{receta.id_categoria}} </td>
+                </tr>
+                
+            </tbody>
+        </table>
+
+        <h3> <a href="/recetas/edit/{{ receta._id }}" >EDIT</a></h3>
+
+        <form action="/recetas/delete/{{ receta._id }}" method="POST">
+            <button type="submit" >DELETE</button>
+        </form>
+        
+
+    </form>
+</div>

@@ -1,0 +1,47 @@
+<div class="container">
+    <h3><a href="/recetas">Lista de Recetas</a></h3>
+
+    <h1>Editar Receta</h1>
+
+    <form action="/recetas/update/{{ receta.id }} " method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" value="{{ receta.nombre }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Ingredientes</td>
+                    <td><input type="text" name="cant_ingredientes" value="{{ receta.cant_ingredientes }}" />
+                </tr>
+                <tr>
+                    <td>Pasos</td>
+                    <td><input type="text" name="pasos" value="{{ receta.pasos }}" />
+                </tr>
+                <tr>
+                    <td>ID Imagen</td>
+                    <td><input type="text" name="id_imagene" value="{{ receta.id_imagene }}" /> </td>
+                </tr>
+                <tr>
+                    <td>Tiempo</td>
+                    <td><input type="text" name="tiempo" value="{{ receta.tiempo }}" /> </td>
+                </tr>
+                <tr>
+                    <td>Modo</td>
+                    <td><input type="text" name="modo" value="{{ receta.modo }}" /> </td>
+                </tr>
+                <tr>
+                    <td>ID Categoria</td>
+                    <td><input type="text" name="id_categoria" value="{{ receta.id_categoria }}" /> </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" > 
+                        <input type="submit" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</div>
