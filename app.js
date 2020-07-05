@@ -9,8 +9,11 @@ var bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var recetasRouter = require('./routes/recetas');
+//var categoriasRouter = require('./routes/categorias');
 
 var app = express();
+
 //conexion  BD
 var mongoDB = 'mongodb://127.0.0.1:27017/foodbd';
 mongoose.connect(mongoDB,{
@@ -31,8 +34,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use('/bootstrap',express.static(__dirname+'/node_modules/bootstrap/dist/css/'));//linea para BOOTSTRAP
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/recetas', recetasRouter);
+//app.use('/categorias', categoriasRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

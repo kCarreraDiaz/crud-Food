@@ -1,6 +1,12 @@
 conn= new Mongo();
 
 db=conn.getDB('foodbd');
+
+db.usuarios.drop();
+db.recetas.drop();
+db.comentarios.drop();
+db.categorias.drop();
+
 db.usuarios.insert(
     [
         {id_usuario:1,
@@ -15,9 +21,9 @@ db.usuarios.insert(
 );
 db.recetas.insert(
     [
-        {id_receta:1,
+        {
         nombre:'Receta 1',
-        cant_ingredientes:6,
+        cant_ingredientes:'bhbjhbjk',
         pasos:'1 Mezclar el ingrediente con ....',
         id_imagene:1,
         tiempo:'2 horas',
