@@ -11,12 +11,9 @@ var session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-<<<<<<< HEAD
 var recetasRouter = require('./routes/recetas');
 //var categoriasRouter = require('./routes/categorias');
-=======
 var categoriasRouter = require('./routes/categorias');
->>>>>>> b3a8122458a951890e31cfe5a4684339c88bc6b5
 
 var app = express();
 
@@ -54,12 +51,9 @@ app.use('/bootstrap',express.static(__dirname+'/node_modules/bootstrap/dist/css/
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-<<<<<<< HEAD
 app.use('/recetas', recetasRouter);
 //app.use('/categorias', categoriasRouter);
-=======
 app.use('/categorias', categoriasRouter);
->>>>>>> b3a8122458a951890e31cfe5a4684339c88bc6b5
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
