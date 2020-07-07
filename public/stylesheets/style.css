@@ -65,11 +65,82 @@ h3 .add:hover {
 }
 
 .delete {
-  font-size: 20px;
+  font-size: 16px;
   color: red;
   background: none;
   margin: 0;
   padding: 0;
   border: none;
   outline: none;
+}
+
+.title-card {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.formulario {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.5);
+  background: #fff;
+  margin-top: 50px;
+}
+
+.formulario textarea {
+  width: 100%;
+  max-height: 200px;
+  min-height: 200px;
+  padding: 10px;
+}
+.form-group {
+  width: 100%;
+}
+.id {
+  width: 48%;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.btn {
+  width: 100%;
+  padding: 15px 0;
+}
+.detalle {
+  margin-top: 50px;
+}
+.container ul p {
+  margin-bottom: 20px;
+}
+.container ul {
+  list-style: square;
+}
+.delete-boton {
+  border: 1px solid red;
+  background: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.delete-boton:hover {
+  color: #fff;
+  background: red;
+}
+.texto {
+  max-width: 400px;
+  overflow: hidden;
+}
+section {
+  width: 100%;
+  text-align: left;
+}
+p {
+  text-align: justify;
+  overflow: auto;
 }

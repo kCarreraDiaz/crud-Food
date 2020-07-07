@@ -38,6 +38,7 @@ recetaController.save = function(req, res) {
             return;
         }
         console.log("Receta creado satisfactoriamente");
+        req.flash('success', 'Receta creada satisfactoriamente');
         res.redirect("/recetas/show/" + receta._id);
         // res.redirect("/empleados");        
 
@@ -76,6 +77,7 @@ recetaController.delete = function(req, res) {
             return;
         }
         console.log("Receta eliminado");
+        req.flash('success', 'Receta eliminada correctamente');
         res.redirect('/recetas');
 
     });
@@ -100,7 +102,7 @@ recetaController.update = function(req, res){
         }
         
         console.log( receta );
-        
+        req.flash('success', 'Receta actualizada correctamente');
         res.redirect('/recetas/show/' + receta._id);
         
     });

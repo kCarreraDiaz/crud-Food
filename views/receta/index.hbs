@@ -1,9 +1,14 @@
 <div class="title">
     <h1>Recetas</h1>
 </div>
-    
+  
 <p>
     <div class="container">
+        {{#if success}}
+            <div class="alert alert-success" role="alert">
+                {{success}}
+            </div>
+        {{/if}} 
         <h3> <a class="add" href="/recetas/create"> Crear receta </a></h3>
         <h2>Lista de Recetas</h2>
         {{#if recetas }}

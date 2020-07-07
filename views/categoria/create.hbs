@@ -1,19 +1,21 @@
 <div class="container">
-    <h3><a href="/categorias">Lista de categorias</a></h3>
-    <h1>Crear nuevo categoria</h1>
+    <div class="formulario">
+    <div class="title-card">
+
+        <h2>Crear nueva categoria</h2>
+    </div>
     <form action="/categorias/save" method="post">
-        <div>
+        <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" name="nombre" id="nombre">
+            <input class="form-control" type="text" name="nombre" id="nombre" placeholder="Nombre de la categoria">
         </div>
-        <div>
+        <div class="form-group">
             <label for="descripcion">Descripcion</label>
-            <textarea name="descripcion" id="descripcion">
-                
-            </textarea>
+            <textarea class="form-control" name="descripcion" id="descripcion" placeholder="Descripción de la categoria"></textarea>
         </div>
-        <div>
-            <input type="submit" value="Agregar">
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Agregar">
         </div>
     </form>
+    </div>
 </div>

@@ -1,47 +1,42 @@
 <div class="container">
-    <h3><a href="/recetas">Lista de Recetas</a></h3>
-
-    <h1>Editar Receta</h1>
+    <div class="formulario">
+    <div class="title-card">
+        <h2>Editar Receta</h2>
+    </div>
 
     <form action="/recetas/update/{{ receta.id }} " method="post">
-        <table>
-            <tbody>
-                <tr>
-                    <td>Nombre</td>
-                    <td><input type="text" name="nombre" value="{{ receta.nombre }}"/> </td>
-                </tr>
-                <tr>
-                    <td>Ingredientes</td>
-                    <td><textarea name="cant_ingredientes">{{ receta.cant_ingredientes }}></textarea>
-                </tr>
-                <tr>
-                    <td>Pasos</td>
-                    <td><textarea name="pasos">{{ receta.pasos }}</textarea>
-                </tr>
-                <tr>
-                    <td>ID Imagen</td>
-                    <td><input type="text" name="id_imagene" value="{{ receta.id_imagene }}" /> </td>
-                </tr>
-                <tr>
-                    <td>Tiempo</td>
-                    <td><input type="text" name="tiempo" value="{{ receta.tiempo }}" /> </td>
-                </tr>
-                <tr>
-                    <td>Modo</td>
-                    <td><input type="text" name="modo" value="{{ receta.modo }}" /> </td>
-                </tr>
-                <tr>
-                    <td>ID Categoria</td>
-                    <td><input type="text" name="id_categoria" value="{{ receta.id_categoria }}" /> </td>
-                </tr>
-                
-                <tr>
-                    <td colspan="2" > 
-                        <input type="submit" value="Update" />
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
+        <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" type="text" name="nombre" value="{{ receta.nombre }}"/>
+        </div>
+        <div class="form-group">
+            <label>Ingredientes</label>
+            <textarea class="form-control" name="cant_ingredientes">{{ receta.cant_ingredientes }}</textarea>
+        </div>
+        <div class="form-group">
+            <label>Pasos</label>
+            <textarea class="form-control" name="pasos">{{ receta.pasos }}</textarea>
+        </div>
+        <div class="form-group id">
+            <label>ID Imagen</label>
+            <input class="form-control" type="text" name="id_imagene" value="{{ receta.id_imagene }}" />
+        </div>
+        <div class="form-group id">
+            <label>Tiempo</label>
+            <input class="form-control" type="text" name="tiempo" value="{{ receta.tiempo }}" />
+        </div>
+        <div class="form-group id">
+            <label>Modo</label>
+            <input class="form-control" type="text" name="modo" value="{{ receta.modo }}" />
+        </div>
+        <div class="form-group id">
+            <label>ID Categoria</label>
+            <input class="form-control" type="text" name="id_categoria" value="{{ receta.id_categoria }}" />
+        </div>
+        
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Update" />
+        </div>
     </form>
+    </div>
 </div>

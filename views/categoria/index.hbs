@@ -22,7 +22,7 @@
             {{# each categorias}}
             <tr>
                 <td><a href="/categorias/show/{{_id}}">{{ nombre }}</a></td>
-                <td>{{ descripcion }}</td>
+                <td class="texto">{{ descripcion }}</td>
                 <td>{{ created_at }}</td>
                 <td class="opciones"><a class="text-warning" href="/categorias/edit/{{_id}}">Editar</a>
                 <form action="/categorias/delete/{{_id}}" method="post">
