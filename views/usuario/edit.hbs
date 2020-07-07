@@ -1,0 +1,39 @@
+<div class="container">
+    <h3><a href="/usuarios">Lista de Usuarios</a></h3>
+
+    <h1>Editar Usuario</h1>
+
+    <form action="/usuarios/update/{{ usuario.id }} " method="post">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Nombre</td>
+                    <td><input type="text" name="nombre" value="{{ usuario.nombre }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td><input type="text" name="apellido" value="{{ usuario.apellido }}"/> </td>
+                </tr>
+                <tr>
+                    <td>DNI</td>
+                    <td><input type="text" name="dni" value="{{ usuario.dni }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Teléfono</td>
+                    <td><input type="text" name="telefono" value="{{ usuario.telefono }}"/> </td>
+                </tr>
+                <tr>
+                    <td>Dirección</td>
+                    <td><input type="text" name="direccion" value="{{ usuario.direccion }}"/> </td>
+                </tr>
+                               
+                <tr>
+                    <td colspan="2" > 
+                        <input type="submit" value="Update" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </form>
+</div>
