@@ -1,8 +1,7 @@
 <div class="title">
     <h1>Recetas</h1>
 </div>
-  
-<p>
+
     <div class="container">
         {{#if success}}
             <div class="alert alert-success" role="alert">
@@ -29,8 +28,8 @@
                     {{# each recetas }}
                     <tr>
                         <td> <a href="/recetas/show/{{ _id  }}"> {{ nombre }}  </td>
-                        <td> {{ cant_ingredientes }} </td>
-                        <td> {{ pasos }} </td>
+                        <td class="texto"> {{ cant_ingredientes }} </td>
+                        <td class="texto"> {{ pasos }} </td>
                         <td> {{ id_imagene }} </td>
                         <td> {{ tiempo }} </td>
                         <td> {{ modo }} </td>
@@ -44,4 +43,3 @@
             <div>Recetas no encontradas</div>
         {{/if}}
     </div>
-</p>
