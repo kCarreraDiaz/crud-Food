@@ -28,7 +28,7 @@ db.recetas.insert(
         id_imagene:1,
         tiempo:'2 horas',
         modo:'Activo',
-        id_categoria:100,
+        id_categoria:'100',
         id_comentario:1,
         created_at: new Date ('07/01/2020')}
     ]

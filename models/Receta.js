@@ -8,7 +8,7 @@ var RecetaSchema = new Schema({
     id_imagene: {type: String, required:true},//cambie a string
     tiempo: {type: String, required:true},
     modo: {type: String, required:true, max:35},
-    id_categoria: {type: Number, required:true, max:20},
+    id_categoria: {type: String, required:true, max:35},
     id_comentario: {type: Number},
     created_at: {type: Date, default: Date.now}
 })
