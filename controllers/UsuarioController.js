@@ -38,6 +38,7 @@ usuarioController.save = function(req, res) {
             return;
         }
         console.log("Usuario creado satisfactoriamente");
+        req.flash('success', 'Usuario agregado correctamente');
         res.redirect("/usuarios/show/" + usuario._id);
         // res.redirect("/empleados");        
 
@@ -76,6 +77,7 @@ usuarioController.delete = function(req, res) {
             return;
         }
         console.log("Usuario eliminado");
+        req.flash('success', 'Usuario eliminado correctamente');
         res.redirect('/usuarios');
 
     });
@@ -100,7 +102,7 @@ usuarioController.update = function(req, res){
         }
         
         console.log( usuario );
-        
+        req.flash('success', 'Usuario actualizado correctamente');
         res.redirect('/usuarios/show/' + usuario._id);
         
     });
